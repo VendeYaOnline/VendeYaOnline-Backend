@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formularios",
+  "info": {
+    "singularName": "formulario",
+    "pluralName": "formularios",
+    "displayName": "Formulario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Apellido": {
+      "type": "string",
+      "required": true
+    },
+    "Correo": {
+      "type": "email",
+      "required": true
+    },
+    "Telefono": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

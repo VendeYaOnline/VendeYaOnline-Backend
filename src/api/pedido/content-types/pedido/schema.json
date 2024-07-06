@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "singularName": "pedido",
+    "pluralName": "pedidos",
+    "displayName": "Compras",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Fecha": {
+      "type": "date",
+      "required": true
+    },
+    "Precio": {
+      "type": "decimal",
+      "required": true
+    },
+    "Tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Tienda Online",
+        "Página web"
+      ],
+      "required": true
+    }
+  }
+}
