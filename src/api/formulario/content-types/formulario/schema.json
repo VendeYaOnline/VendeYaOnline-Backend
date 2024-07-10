@@ -27,6 +27,10 @@
     "Telefono": {
       "type": "biginteger",
       "required": true
+    },
+    "Mensaje": {
+      "type": "text",
+      "required": true
     }
   }
 }
