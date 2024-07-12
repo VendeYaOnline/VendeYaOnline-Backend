@@ -379,6 +379,7 @@ export interface ApiFormularioFormulario extends Schema.CollectionType {
     Correo: Attribute.Email & Attribute.Required;
     Telefono: Attribute.BigInteger & Attribute.Required;
     Mensaje: Attribute.Text & Attribute.Required;
+    Respondido: Attribute.Boolean & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
