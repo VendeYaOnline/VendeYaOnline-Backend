@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "pedidos",
+  "collectionName": "suscripciones",
   "info": {
-    "singularName": "pedido",
-    "pluralName": "pedidos",
-    "displayName": "Compras",
+    "singularName": "suscripcione",
+    "pluralName": "suscripciones",
+    "displayName": "Suscripciones",
     "description": ""
   },
   "options": {
@@ -12,9 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Fecha": {
-      "type": "date",
+    "Activo": {
+      "type": "boolean",
       "required": true
+    },
+    "Fecha": {
+      "type": "date"
     },
     "Precio": {
       "type": "decimal",
@@ -27,6 +30,11 @@
         "Página web"
       ],
       "required": true
+    },
+    "Cliente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

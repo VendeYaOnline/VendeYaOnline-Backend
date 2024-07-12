@@ -396,32 +396,38 @@ export interface ApiFormularioFormulario extends Schema.CollectionType {
   };
 }
 
-export interface ApiPedidoPedido extends Schema.CollectionType {
-  collectionName: 'pedidos';
+export interface ApiSuscripcioneSuscripcione extends Schema.CollectionType {
+  collectionName: 'suscripciones';
   info: {
-    singularName: 'pedido';
-    pluralName: 'pedidos';
-    displayName: 'Compras';
+    singularName: 'suscripcione';
+    pluralName: 'suscripciones';
+    displayName: 'Suscripciones';
     description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    Fecha: Attribute.Date & Attribute.Required;
+    Activo: Attribute.Boolean & Attribute.Required;
+    Fecha: Attribute.Date;
     Precio: Attribute.Decimal & Attribute.Required;
     Tipo: Attribute.Enumeration<['Tienda Online', 'P\u00E1gina web']> &
       Attribute.Required;
+    Cliente: Attribute.Relation<
+      'api::suscripcione.suscripcione',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::pedido.pedido',
+      'api::suscripcione.suscripcione',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::pedido.pedido',
+      'api::suscripcione.suscripcione',
       'oneToOne',
       'admin::user'
     > &
@@ -869,7 +875,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::formulario.formulario': ApiFormularioFormulario;
-      'api::pedido.pedido': ApiPedidoPedido;
+      'api::suscripcione.suscripcione': ApiSuscripcioneSuscripcione;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
