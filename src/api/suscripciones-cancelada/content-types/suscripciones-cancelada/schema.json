@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "suscripciones_canceladas",
+  "info": {
+    "singularName": "suscripciones-cancelada",
+    "pluralName": "suscripciones-canceladas",
+    "displayName": "Suscripciones canceladas"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Fecha": {
+      "type": "date"
+    },
+    "Precio": {
+      "type": "decimal"
+    },
+    "Tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Tienda Online",
+        "Página web"
+      ]
+    },
+    "Cliente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

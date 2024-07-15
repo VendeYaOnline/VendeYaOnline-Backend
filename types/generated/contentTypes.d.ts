@@ -436,6 +436,43 @@ export interface ApiSuscripcioneSuscripcione extends Schema.CollectionType {
   };
 }
 
+export interface ApiSuscripcionesCanceladaSuscripcionesCancelada
+  extends Schema.CollectionType {
+  collectionName: 'suscripciones_canceladas';
+  info: {
+    singularName: 'suscripciones-cancelada';
+    pluralName: 'suscripciones-canceladas';
+    displayName: 'Suscripciones canceladas';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Fecha: Attribute.Date;
+    Precio: Attribute.Decimal;
+    Tipo: Attribute.Enumeration<['Tienda Online', 'P\u00E1gina web']>;
+    Cliente: Attribute.Relation<
+      'api::suscripciones-cancelada.suscripciones-cancelada',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::suscripciones-cancelada.suscripciones-cancelada',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::suscripciones-cancelada.suscripciones-cancelada',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -877,6 +914,7 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::formulario.formulario': ApiFormularioFormulario;
       'api::suscripcione.suscripcione': ApiSuscripcioneSuscripcione;
+      'api::suscripciones-cancelada.suscripciones-cancelada': ApiSuscripcionesCanceladaSuscripcionesCancelada;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
