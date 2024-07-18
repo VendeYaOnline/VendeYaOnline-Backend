@@ -8,7 +8,7 @@ const preapproval = new PreApproval(client);
 module.exports = {
   createSubscription: async (ctx) => {
     try {
-      const { plan, email, token, user_id } = ctx.request.body;
+      const { plan, email } = ctx.request.body;
 
       const subscription = await preapproval.create({
         body: {
@@ -22,8 +22,6 @@ module.exports = {
           },
           back_url:
             "https://vende-ya-online.vercel.app/checkout?id=4EmuiW2J4wTmYRr",
-          /*         // @ts-ignore
-          notification_url: `https://vende-ya-online.vercel.app/api/webhooks/mercado-pago?token=${token}&user_id=${user_id}`, */
         },
       });
 
