@@ -22,8 +22,8 @@ module.exports = {
           },
           back_url:
             "https://vende-ya-online.vercel.app/checkout?id=4EmuiW2J4wTmYRr",
-          // @ts-ignore
-          notification_url: `https://vende-ya-online.vercel.app/api/webhooks/mercado-pago?token=${token}&user_id=${user_id}`,
+          /*         // @ts-ignore
+          notification_url: `https://vende-ya-online.vercel.app/api/webhooks/mercado-pago?token=${token}&user_id=${user_id}`, */
         },
       });
 
