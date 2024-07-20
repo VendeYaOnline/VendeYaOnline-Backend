@@ -15,9 +15,12 @@ module.exports = {
         body: {
           items: products,
           back_urls: {
-            success: "https://vende-ya-online.vercel.app/",
-            failure: "https://vende-ya-online.vercel.app/",
-            pending: "https://vende-ya-online.vercel.app/",
+            success:
+              "https://vende-ya-online.vercel.app/checkout?status=success&id=vobrL9XhukPXOev",
+            pending:
+              "https://vende-ya-online.vercel.app/checkout?status=pending&id=d3pQSuU7uHCnfZn",
+            failure:
+              "https://vende-ya-online.vercel.app/checkout?status=failure&id=E1ETwTlgVmRmGOK",
           },
           auto_return: "approved",
           payment_methods: {

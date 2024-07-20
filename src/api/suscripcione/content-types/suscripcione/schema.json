@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Activo": {
-      "type": "boolean",
-      "required": true
-    },
     "Fecha": {
       "type": "date"
     },

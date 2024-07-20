@@ -409,7 +409,6 @@ export interface ApiSuscripcioneSuscripcione extends Schema.CollectionType {
     draftAndPublish: false;
   };
   attributes: {
-    Activo: Attribute.Boolean & Attribute.Required;
     Fecha: Attribute.Date;
     Precio: Attribute.Decimal & Attribute.Required;
     Tipo: Attribute.Enumeration<['Tienda Online', 'P\u00E1gina web']> &
