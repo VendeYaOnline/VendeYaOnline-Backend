@@ -8,7 +8,8 @@ const preference = new Preference(client);
 module.exports = {
   createPreference: async (ctx) => {
     try {
-      const { products, token, user_id } = ctx.request.body;
+      const { products, token, user_id, email } = ctx.request.body;
+      const { to, subject, client, service, price, date } = email;
 
       //* Crea una nueva preferencia de pago con los datos del producto
       const result = await preference.create({
@@ -26,7 +27,7 @@ module.exports = {
           payment_methods: {
             installments: 12,
           },
-          notification_url: `https://vende-ya-online.vercel.app/api/webhooks/mercado-pago?filename=${user_id}&token=${token}&user_id=${user_id}`,
+          notification_url: `https://vende-ya-online.vercel.app/api/webhooks/mercado-pago?filename=${user_id}&token=${token}&user_id=${user_id}&to=${to}&subject=${subject}&client=${client}&service=${service}&price=${price}&date=${date}`,
         },
       });
 
