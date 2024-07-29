@@ -16,17 +16,17 @@ module.exports = {
           items: products,
           back_urls: {
             success:
-              "https://vende-ya-online.vercel.app/checkout?status=success&id=vobrL9XhukPXOev",
+              "https://vendeyaonline.com/checkout?status=success&id=vobrL9XhukPXOev",
             pending:
-              "https://vende-ya-online.vercel.app/checkout?status=pending&id=d3pQSuU7uHCnfZn",
+              "https://vendeyaonline.com/checkout?status=pending&id=d3pQSuU7uHCnfZn",
             failure:
-              "https://vende-ya-online.vercel.app/checkout?status=failure&id=E1ETwTlgVmRmGOK",
+              "https://vendeyaonline.com/checkout?status=failure&id=E1ETwTlgVmRmGOK",
           },
           auto_return: "approved",
           payment_methods: {
             installments: 12,
           },
-          notification_url: `https://vende-ya-online.vercel.app/api/webhooks/mercado-pago?filename=${user_id}&token=${token}&user_id=${user_id}`,
+          notification_url: `https://vendeyaonline.com/api/webhooks/mercado-pago?filename=${user_id}&token=${token}&user_id=${user_id}`,
         },
       });
 
