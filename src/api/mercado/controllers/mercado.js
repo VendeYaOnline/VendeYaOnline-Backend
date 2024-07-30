@@ -30,8 +30,8 @@ module.exports = {
         },
       });
 
-      const { id, sandbox_init_point } = result;
-      return { id, sandbox_init_point };
+      const { id, init_point } = result;
+      return { id, init_point };
     } catch (error) {
       console.error("Error al crear la preferencia de pago:", error);
       return ctx.badRequest("Error al crear la preferencia de pago");
