@@ -418,6 +418,7 @@ export interface ApiSuscripcioneSuscripcione extends Schema.CollectionType {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
+    Activa: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
