@@ -16,11 +16,11 @@ module.exports = {
           items: products,
           back_urls: {
             success:
-              "https://vendeyaonline.com/pay?status=success&id=vobrL9XhukPXOev",
+              "https://vendeyaonline.com/mercado-pay?status=success&id=vobrL9XhukPXOev",
             pending:
-              "https://vendeyaonline.com/pay?status=pending&id=d3pQSuU7uHCnfZn",
+              "https://vendeyaonline.com/mercado-pay?status=pending&id=d3pQSuU7uHCnfZn",
             failure:
-              "https://vendeyaonline.com/pay?status=failure&id=E1ETwTlgVmRmGOK",
+              "https://vendeyaonline.com/mercado-pay?status=failure&id=E1ETwTlgVmRmGOK",
           },
           auto_return: "approved",
           payment_methods: {
