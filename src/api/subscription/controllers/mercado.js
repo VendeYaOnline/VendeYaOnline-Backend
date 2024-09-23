@@ -26,8 +26,8 @@ module.exports = {
         },
       });
 
-      const { init_point, id } = subscription;
-      return { subscription_url: init_point, id };
+      const { init_point, application_id } = subscription;
+      return { subscription_url: init_point, application_id };
     } catch (error) {
       console.error("Error al crear la suscripción:", error);
       return ctx.badRequest("Error al crear la suscripción");
