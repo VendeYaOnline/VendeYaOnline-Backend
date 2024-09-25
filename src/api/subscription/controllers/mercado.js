@@ -19,7 +19,7 @@ module.exports = {
           auto_recurring: {
             frequency: 1,
             frequency_type: "months",
-            transaction_amount: plan === "web" ? 30000 : 50000,
+            transaction_amount: plan === "web" ? 30000 : 60000,
             currency_id: "COP",
           },
           back_url: "https://vendeyaonline.com/checkout?id=4EmuiW2J4wTmYRr",
